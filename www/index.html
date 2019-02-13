@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="../node_modules/material-design-icons-iconfont/dist/material-design-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+
+    <link href="../www/css/fontawesome/css/all.css" rel="stylesheet">
+    <!--load all styles -->
+    <title>PLAYR</title>
+</head>
+
+<body>
+
+    <div class="app">
+
+        <main class="container">
+            <section class="page" id="player">
+                <p data-target="home" class="nav"> <i class="fas fa-arrow-left fa-2x"></i></p>
+
+                <p><i class="fas fa-play-circle fa-4x" id="play-btn"></i></p>
+                <p><i class="fas fa-pause-circle fa-4x" id="pause-btn"></i></p>
+                <p><i class="fas fa-volume-up fa-3x" id="up-btn"></i></p>
+                <p><i class="fas fa-volume-down fa-3x" id="down-btn"></i></p>
+                <p><i class="fas fa-fast-forward fa-3x" id="ff-btn"></i></p>
+                <p><i class="fas fa-fast-backward fa-3x" id="rew-btn"></i></p>
+            </section>
+
+            <section class="page" id="home">
+                <h1 data-target="player" class="nav">Home</h1>
+
+            </section>
+
+
+        </main>
+
+
+
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
