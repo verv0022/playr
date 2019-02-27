@@ -29,16 +29,11 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" href="../node_modules/material-design-icons-iconfont/dist/material-design-icons.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-        crossorigin="anonymous">
-
     <link href="../www/css/fontawesome/css/all.css" rel="stylesheet">
     <!--load all styles -->
     <title>PLAYR</title>
@@ -48,27 +43,39 @@
 
     <div class="app">
 
-        <main class="container">
-            <section class="page" id="player">
-                <p data-target="home" class="nav"> <i class="fas fa-arrow-left fa-2x"></i></p>
+        <section class="page" id="homePage">
 
-                <p><i class="fas fa-play-circle fa-4x" id="play-btn"></i></p>
-                <p><i class="fas fa-pause-circle fa-4x" id="pause-btn"></i></p>
-                <p><i class="fas fa-volume-up fa-3x" id="up-btn"></i></p>
-                <p><i class="fas fa-volume-down fa-3x" id="down-btn"></i></p>
-                <p><i class="fas fa-fast-forward fa-3x" id="ff-btn"></i></p>
-                <p><i class="fas fa-fast-backward fa-3x" id="rew-btn"></i></p>
-            </section>
+            <header>
+                <i data-target="detailsPage" class="nav fas fa-share-square" id="navigator"></i>
+            </header>
 
-            <section class="page" id="home">
-                <h1 data-target="player" class="nav">Home</h1>
+            <ul id="tracklist">
+            </ul>
 
-            </section>
+        </section>
 
+        <section class="page" id="detailsPage">
 
-        </main>
+            <h2 data-target="homePage" id="back-arrow" class="nav"> <i class="fas fa-arrow-left fa-2x"></i></h2>
 
+            <div id="detailsDiv">
+            </div>
 
+        </section>
+
+        <div id="volume">
+            <i class="vol fas fa-volume-up fa-2x" id="up-btn"></i>
+            <i class="vol fas fa-volume-down fa-2x" id="down-btn"></i>
+            <i class="vol fas fa-volume-mute fa-2x" id="mute-btn"></i>
+        </div>
+
+        <div id="controls">
+
+            <i class="control fas fa-backward fa-3x" id="rew-btn"></i>
+            <i class="control fas fa-play-circle fa-3x" id="play-btn"></i>
+            <i class="control fas fa-pause-circle fa-3x" id="pause-btn"></i>
+            <i class="control fas fa-forward fa-3x" id="ff-btn"></i>
+        </div>
 
     </div>
     <script type="text/javascript" src="cordova.js"></script>
